@@ -46,6 +46,39 @@ npx playwright test --ui
 npx playwright show-report
 ```
 
+### テスト結果の共有
+
+PlaywrightのUIモード (`--ui`) はローカルデバッグ用であり、その画面を直接ファイルとしてエクスポートする機能はありません。
+テスト結果を他者に共有したい場合は、**HTMLレポート** (`playwright-report` フォルダ) を使用してください。
+
+1. テストを実行してレポートを生成します (`npx playwright test`)
+2. 生成された `playwright-report` フォルダ全体を共有します（ZIP圧縮など）
+3. 受け取った人は、以下のコマンドでレポートを閲覧できます:
+
+```bash
+npx playwright show-report path/to/report-folder
+```
+
+> **注意:** `index.html` を直接ブラウザで開くと、セキュリティ制限により正しく表示されない場合があります。必ず `show-report` コマンドやVS CodeのLive Serverなどを使用してください。
+
+### 実行済みのテスト詳細を確認する (Trace Viewer)
+
+テスト実行時の挙動（スクリーンショット、ネットワークログ、コンソールログなど）を、タイムラインで後から再生・確認するには、**トレース機能**を使用します。
+
+1. トレースを有効にしてテストを実行します:
+
+```bash
+npx playwright test --trace on
+```
+
+2. レポートを表示します:
+
+```bash
+npx playwright show-report
+```
+
+3. レポート内の各テストケースにある **Trace** アイコンをクリックすると、実行時の様子がUIモードのように再生されます。
+
 ### トラブルシューティング
 
 #### ポート競合 (EADDRINUSE)
