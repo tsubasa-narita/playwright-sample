@@ -1,0 +1,725 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - img [ref=e6]
+      - generic [ref=e9]: SCM Manager
+    - navigation [ref=e10]:
+      - link "ダッシュボード" [ref=e11] [cursor=pointer]:
+        - /url: "#"
+      - link "受注管理" [ref=e12] [cursor=pointer]:
+        - /url: /
+      - link "在庫管理" [ref=e13] [cursor=pointer]:
+        - /url: "#"
+      - link "出荷管理" [ref=e14] [cursor=pointer]:
+        - /url: "#"
+      - link "マスタ管理" [ref=e15] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=e16]:
+      - button "3" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: "3"
+      - generic [ref=e21]:
+        - generic [ref=e22]: TY
+        - generic [ref=e23]: 田中 太郎
+  - generic [ref=e24]:
+    - complementary [ref=e25]:
+      - generic [ref=e26]:
+        - heading "受注管理" [level=3] [ref=e27]
+        - list [ref=e28]:
+          - listitem [ref=e29]:
+            - link "受注一覧" [ref=e30] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e31]:
+            - link "新規受注登録" [ref=e32] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e33]:
+            - link "受注承認" [ref=e34] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e35]:
+            - link "納品予定" [ref=e36] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e37]:
+        - heading "レポート" [level=3] [ref=e38]
+        - list [ref=e39]:
+          - listitem [ref=e40]:
+            - link "売上レポート" [ref=e41] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e42]:
+            - link "在庫回転率" [ref=e43] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e44]:
+            - link "納期遵守率" [ref=e45] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e46]:
+        - heading "設定" [level=3] [ref=e47]
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "通知設定" [ref=e50] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e51]:
+            - link "アカウント" [ref=e52] [cursor=pointer]:
+              - /url: "#"
+    - main [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - heading "受注一覧" [level=1] [ref=e57]
+            - paragraph [ref=e58]: 全ての受注情報を確認・管理できます
+          - generic [ref=e59]:
+            - button "CSV出力" [ref=e60] [cursor=pointer]:
+              - img [ref=e61]
+              - text: CSV出力
+            - button "新規受注" [ref=e63] [cursor=pointer]:
+              - img [ref=e64]
+              - text: 新規受注
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - img [ref=e69]
+            - generic [ref=e71]:
+              - generic [ref=e72]: 今月の受注件数
+              - generic [ref=e73]: 68件
+          - generic [ref=e74]:
+            - img [ref=e76]
+            - generic [ref=e78]:
+              - generic [ref=e79]: 今月の受注金額
+              - generic [ref=e80]: ¥209,360,720
+          - generic [ref=e81]:
+            - img [ref=e83]
+            - generic [ref=e86]:
+              - generic [ref=e87]: 処理待ち
+              - generic [ref=e88]: 23件
+          - generic [ref=e89]:
+            - img [ref=e91]
+            - generic [ref=e93]:
+              - generic [ref=e94]: 納期遅延
+              - generic [ref=e95]: 1件
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e99]: 受注番号
+              - 'textbox "例: ORD-2026-0001" [ref=e100]'
+            - generic [ref=e101]:
+              - generic [ref=e102]: 取引先
+              - combobox [ref=e103] [cursor=pointer]:
+                - option "すべて" [selected]
+                - option "株式会社山田製作所"
+                - option "東京エレクトロニクス株式会社"
+                - option "グローバルテック株式会社"
+                - option "日本精密工業株式会社"
+                - option "サクラ商事株式会社"
+                - option "富士テクノロジー株式会社"
+                - option "アジアパーツ株式会社"
+                - option "ミドリ電子工業株式会社"
+                - option "ニュースター金属株式会社"
+                - option "プラネット物産株式会社"
+                - option "ブルーウェーブ株式会社"
+                - option "サンライズ工業株式会社"
+            - generic [ref=e104]:
+              - generic [ref=e105]: ステータス
+              - combobox [ref=e106] [cursor=pointer]:
+                - option "すべて" [selected]
+                - option "新規"
+                - option "処理中"
+                - option "出荷準備中"
+                - option "出荷済"
+                - option "完了"
+                - option "キャンセル"
+            - generic [ref=e107]:
+              - generic [ref=e108]: 担当者
+              - combobox [ref=e109] [cursor=pointer]:
+                - option "すべて" [selected]
+                - option "田中 太郎"
+                - option "佐藤 花子"
+                - option "鈴木 一郎"
+                - option "高橋 美咲"
+                - option "伊藤 大輔"
+                - option "渡辺 さくら"
+          - generic [ref=e110]:
+            - generic [ref=e111]:
+              - generic [ref=e112]: 受注日（開始）
+              - textbox [ref=e113]: 2026-02-01
+            - generic [ref=e114]:
+              - generic [ref=e115]: 受注日（終了）
+              - textbox [ref=e116]: 2026-02-15
+            - generic [ref=e117]:
+              - generic [ref=e118]: 商品カテゴリ
+              - combobox [ref=e119] [cursor=pointer]:
+                - option "すべて" [selected]
+                - option "機械部品"
+                - option "締結部品"
+                - option "電子部品"
+                - option "シール部品"
+                - option "素材"
+                - option "配管部品"
+                - option "消耗品"
+                - option "駆動部品"
+                - option "伝達部品"
+            - generic [ref=e120]:
+              - button "検索" [ref=e121] [cursor=pointer]:
+                - img [ref=e122]
+                - text: 検索
+              - button "クリア" [ref=e125] [cursor=pointer]
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e128]: 68 件の結果を表示
+            - combobox [ref=e130] [cursor=pointer]:
+              - option "10件"
+              - option "25件" [selected]
+              - option "50件"
+              - option "100件"
+          - table [ref=e132]:
+            - rowgroup [ref=e133]:
+              - row "受注番号 ↕ 受注日 ↕ 取引先 ↕ 商品名 数量 ↕ 金額 ↕ 納期 ↕ ステータス 担当者 操作" [ref=e134]:
+                - columnheader [ref=e135]:
+                  - checkbox [ref=e136] [cursor=pointer]
+                - columnheader "受注番号 ↕" [ref=e137] [cursor=pointer]
+                - columnheader "受注日 ↕" [ref=e138] [cursor=pointer]
+                - columnheader "取引先 ↕" [ref=e139] [cursor=pointer]
+                - columnheader "商品名" [ref=e140]
+                - columnheader "数量 ↕" [ref=e141] [cursor=pointer]
+                - columnheader "金額 ↕" [ref=e142] [cursor=pointer]
+                - columnheader "納期 ↕" [ref=e143] [cursor=pointer]
+                - columnheader "ステータス" [ref=e144]
+                - columnheader "担当者" [ref=e145]
+                - columnheader "操作" [ref=e146]
+            - rowgroup [ref=e147]:
+              - row "ORD-2026-0001 2026-02-02 日本精密工業株式会社 LED基板ユニット LB-100 425 ¥2,677,500 2026-02-09 キャンセル 鈴木 一郎" [ref=e148]:
+                - cell [ref=e149]:
+                  - checkbox [ref=e150] [cursor=pointer]
+                - cell "ORD-2026-0001" [ref=e151]:
+                  - link "ORD-2026-0001" [ref=e152] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-02" [ref=e153]
+                - cell "日本精密工業株式会社" [ref=e154]
+                - cell "LED基板ユニット LB-100" [ref=e155]
+                - cell "425" [ref=e156]
+                - cell "¥2,677,500" [ref=e157]
+                - cell "2026-02-09" [ref=e158]
+                - cell "キャンセル" [ref=e159]:
+                  - generic [ref=e160]: キャンセル
+                - cell "鈴木 一郎" [ref=e161]
+                - cell [ref=e162]:
+                  - generic [ref=e163]:
+                    - button "詳細" [ref=e164] [cursor=pointer]:
+                      - img [ref=e165]
+                    - button "編集" [ref=e168] [cursor=pointer]:
+                      - img [ref=e169]
+              - row "ORD-2026-0002 2026-02-11 サンライズ工業株式会社 LED基板ユニット LB-100 484 ¥3,049,200 2026-03-11 出荷済 佐藤 花子" [ref=e171]:
+                - cell [ref=e172]:
+                  - checkbox [ref=e173] [cursor=pointer]
+                - cell "ORD-2026-0002" [ref=e174]:
+                  - link "ORD-2026-0002" [ref=e175] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-11" [ref=e176]
+                - cell "サンライズ工業株式会社" [ref=e177]
+                - cell "LED基板ユニット LB-100" [ref=e178]
+                - cell "484" [ref=e179]
+                - cell "¥3,049,200" [ref=e180]
+                - cell "2026-03-11" [ref=e181]
+                - cell "出荷済" [ref=e182]:
+                  - generic [ref=e183]: 出荷済
+                - cell "佐藤 花子" [ref=e184]
+                - cell [ref=e185]:
+                  - generic [ref=e186]:
+                    - button "詳細" [ref=e187] [cursor=pointer]:
+                      - img [ref=e188]
+                    - button "編集" [ref=e191] [cursor=pointer]:
+                      - img [ref=e192]
+              - row "ORD-2026-0003 2026-02-02 グローバルテック株式会社 アルミ押出材 AL-6063 297 ¥3,564,000 2026-02-28 出荷済 高橋 美咲" [ref=e194]:
+                - cell [ref=e195]:
+                  - checkbox [ref=e196] [cursor=pointer]
+                - cell "ORD-2026-0003" [ref=e197]:
+                  - link "ORD-2026-0003" [ref=e198] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-02" [ref=e199]
+                - cell "グローバルテック株式会社" [ref=e200]
+                - cell "アルミ押出材 AL-6063" [ref=e201]
+                - cell "297" [ref=e202]
+                - cell "¥3,564,000" [ref=e203]
+                - cell "2026-02-28" [ref=e204]
+                - cell "出荷済" [ref=e205]:
+                  - generic [ref=e206]: 出荷済
+                - cell "高橋 美咲" [ref=e207]
+                - cell [ref=e208]:
+                  - generic [ref=e209]:
+                    - button "詳細" [ref=e210] [cursor=pointer]:
+                      - img [ref=e211]
+                    - button "編集" [ref=e214] [cursor=pointer]:
+                      - img [ref=e215]
+              - row "ORD-2026-0004 2026-02-11 富士テクノロジー株式会社 LED基板ユニット LB-100 493 ¥3,105,900 2026-02-24 処理中 鈴木 一郎" [ref=e217]:
+                - cell [ref=e218]:
+                  - checkbox [ref=e219] [cursor=pointer]
+                - cell "ORD-2026-0004" [ref=e220]:
+                  - link "ORD-2026-0004" [ref=e221] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-11" [ref=e222]
+                - cell "富士テクノロジー株式会社" [ref=e223]
+                - cell "LED基板ユニット LB-100" [ref=e224]
+                - cell "493" [ref=e225]
+                - cell "¥3,105,900" [ref=e226]
+                - cell "2026-02-24" [ref=e227]
+                - cell "処理中" [ref=e228]:
+                  - generic [ref=e229]: 処理中
+                - cell "鈴木 一郎" [ref=e230]
+                - cell [ref=e231]:
+                  - generic [ref=e232]:
+                    - button "詳細" [ref=e233] [cursor=pointer]:
+                      - img [ref=e234]
+                    - button "編集" [ref=e237] [cursor=pointer]:
+                      - img [ref=e238]
+              - row "ORD-2026-0005 2026-02-02 サンライズ工業株式会社 サーボモーター SM-750W 176 ¥7,920,000 2026-03-01 出荷準備中 鈴木 一郎" [ref=e240]:
+                - cell [ref=e241]:
+                  - checkbox [ref=e242] [cursor=pointer]
+                - cell "ORD-2026-0005" [ref=e243]:
+                  - link "ORD-2026-0005" [ref=e244] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-02" [ref=e245]
+                - cell "サンライズ工業株式会社" [ref=e246]
+                - cell "サーボモーター SM-750W" [ref=e247]
+                - cell "176" [ref=e248]
+                - cell "¥7,920,000" [ref=e249]
+                - cell "2026-03-01" [ref=e250]
+                - cell "出荷準備中" [ref=e251]:
+                  - generic [ref=e252]: 出荷準備中
+                - cell "鈴木 一郎" [ref=e253]
+                - cell [ref=e254]:
+                  - generic [ref=e255]:
+                    - button "詳細" [ref=e256] [cursor=pointer]:
+                      - img [ref=e257]
+                    - button "編集" [ref=e260] [cursor=pointer]:
+                      - img [ref=e261]
+              - row "ORD-2026-0006 2026-02-12 日本精密工業株式会社 LED基板ユニット LB-100 319 ¥2,009,700 2026-03-11 キャンセル 鈴木 一郎" [ref=e263]:
+                - cell [ref=e264]:
+                  - checkbox [ref=e265] [cursor=pointer]
+                - cell "ORD-2026-0006" [ref=e266]:
+                  - link "ORD-2026-0006" [ref=e267] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-12" [ref=e268]
+                - cell "日本精密工業株式会社" [ref=e269]
+                - cell "LED基板ユニット LB-100" [ref=e270]
+                - cell "319" [ref=e271]
+                - cell "¥2,009,700" [ref=e272]
+                - cell "2026-03-11" [ref=e273]
+                - cell "キャンセル" [ref=e274]:
+                  - generic [ref=e275]: キャンセル
+                - cell "鈴木 一郎" [ref=e276]
+                - cell [ref=e277]:
+                  - generic [ref=e278]:
+                    - button "詳細" [ref=e279] [cursor=pointer]:
+                      - img [ref=e280]
+                    - button "編集" [ref=e283] [cursor=pointer]:
+                      - img [ref=e284]
+              - row "ORD-2026-0007 2026-02-06 グローバルテック株式会社 LED基板ユニット LB-100 222 ¥1,398,600 2026-03-05 キャンセル 高橋 美咲" [ref=e286]:
+                - cell [ref=e287]:
+                  - checkbox [ref=e288] [cursor=pointer]
+                - cell "ORD-2026-0007" [ref=e289]:
+                  - link "ORD-2026-0007" [ref=e290] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-06" [ref=e291]
+                - cell "グローバルテック株式会社" [ref=e292]
+                - cell "LED基板ユニット LB-100" [ref=e293]
+                - cell "222" [ref=e294]
+                - cell "¥1,398,600" [ref=e295]
+                - cell "2026-03-05" [ref=e296]
+                - cell "キャンセル" [ref=e297]:
+                  - generic [ref=e298]: キャンセル
+                - cell "高橋 美咲" [ref=e299]
+                - cell [ref=e300]:
+                  - generic [ref=e301]:
+                    - button "詳細" [ref=e302] [cursor=pointer]:
+                      - img [ref=e303]
+                    - button "編集" [ref=e306] [cursor=pointer]:
+                      - img [ref=e307]
+              - row "ORD-2026-0008 2026-02-06 ブルーウェーブ株式会社 精密ベアリング A-100 36 ¥126,000 2026-02-16 出荷済 高橋 美咲" [ref=e309]:
+                - cell [ref=e310]:
+                  - checkbox [ref=e311] [cursor=pointer]
+                - cell "ORD-2026-0008" [ref=e312]:
+                  - link "ORD-2026-0008" [ref=e313] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-06" [ref=e314]
+                - cell "ブルーウェーブ株式会社" [ref=e315]
+                - cell "精密ベアリング A-100" [ref=e316]
+                - cell "36" [ref=e317]
+                - cell "¥126,000" [ref=e318]
+                - cell "2026-02-16" [ref=e319]
+                - cell "出荷済" [ref=e320]:
+                  - generic [ref=e321]: 出荷済
+                - cell "高橋 美咲" [ref=e322]
+                - cell [ref=e323]:
+                  - generic [ref=e324]:
+                    - button "詳細" [ref=e325] [cursor=pointer]:
+                      - img [ref=e326]
+                    - button "編集" [ref=e329] [cursor=pointer]:
+                      - img [ref=e330]
+              - row "ORD-2026-0009 2026-02-06 富士テクノロジー株式会社 電子基板 PCB-200X 172 ¥1,462,000 2026-02-13 完了 田中 太郎" [ref=e332]:
+                - cell [ref=e333]:
+                  - checkbox [ref=e334] [cursor=pointer]
+                - cell "ORD-2026-0009" [ref=e335]:
+                  - link "ORD-2026-0009" [ref=e336] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-06" [ref=e337]
+                - cell "富士テクノロジー株式会社" [ref=e338]
+                - cell "電子基板 PCB-200X" [ref=e339]
+                - cell "172" [ref=e340]
+                - cell "¥1,462,000" [ref=e341]
+                - cell "2026-02-13" [ref=e342]
+                - cell "完了" [ref=e343]:
+                  - generic [ref=e344]: 完了
+                - cell "田中 太郎" [ref=e345]
+                - cell [ref=e346]:
+                  - generic [ref=e347]:
+                    - button "詳細" [ref=e348] [cursor=pointer]:
+                      - img [ref=e349]
+                    - button "編集" [ref=e352] [cursor=pointer]:
+                      - img [ref=e353]
+              - row "ORD-2026-0010 2026-02-06 プラネット物産株式会社 LED基板ユニット LB-100 87 ¥548,100 2026-03-07 完了 田中 太郎" [ref=e355]:
+                - cell [ref=e356]:
+                  - checkbox [ref=e357] [cursor=pointer]
+                - cell "ORD-2026-0010" [ref=e358]:
+                  - link "ORD-2026-0010" [ref=e359] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-06" [ref=e360]
+                - cell "プラネット物産株式会社" [ref=e361]
+                - cell "LED基板ユニット LB-100" [ref=e362]
+                - cell "87" [ref=e363]
+                - cell "¥548,100" [ref=e364]
+                - cell "2026-03-07" [ref=e365]
+                - cell "完了" [ref=e366]:
+                  - generic [ref=e367]: 完了
+                - cell "田中 太郎" [ref=e368]
+                - cell [ref=e369]:
+                  - generic [ref=e370]:
+                    - button "詳細" [ref=e371] [cursor=pointer]:
+                      - img [ref=e372]
+                    - button "編集" [ref=e375] [cursor=pointer]:
+                      - img [ref=e376]
+              - row "ORD-2026-0011 2026-02-12 ブルーウェーブ株式会社 ステンレスボルト M8×30 365 ¥43,800 2026-03-09 処理中 渡辺 さくら" [ref=e378]:
+                - cell [ref=e379]:
+                  - checkbox [ref=e380] [cursor=pointer]
+                - cell "ORD-2026-0011" [ref=e381]:
+                  - link "ORD-2026-0011" [ref=e382] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-12" [ref=e383]
+                - cell "ブルーウェーブ株式会社" [ref=e384]
+                - cell "ステンレスボルト M8×30" [ref=e385]
+                - cell "365" [ref=e386]
+                - cell "¥43,800" [ref=e387]
+                - cell "2026-03-09" [ref=e388]
+                - cell "処理中" [ref=e389]:
+                  - generic [ref=e390]: 処理中
+                - cell "渡辺 さくら" [ref=e391]
+                - cell [ref=e392]:
+                  - generic [ref=e393]:
+                    - button "詳細" [ref=e394] [cursor=pointer]:
+                      - img [ref=e395]
+                    - button "編集" [ref=e398] [cursor=pointer]:
+                      - img [ref=e399]
+              - row "ORD-2026-0012 2026-02-15 ブルーウェーブ株式会社 銅パイプ CP-15A 194 ¥1,086,400 2026-03-05 キャンセル 渡辺 さくら" [ref=e401]:
+                - cell [ref=e402]:
+                  - checkbox [ref=e403] [cursor=pointer]
+                - cell "ORD-2026-0012" [ref=e404]:
+                  - link "ORD-2026-0012" [ref=e405] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-15" [ref=e406]
+                - cell "ブルーウェーブ株式会社" [ref=e407]
+                - cell "銅パイプ CP-15A" [ref=e408]
+                - cell "194" [ref=e409]
+                - cell "¥1,086,400" [ref=e410]
+                - cell "2026-03-05" [ref=e411]
+                - cell "キャンセル" [ref=e412]:
+                  - generic [ref=e413]: キャンセル
+                - cell "渡辺 さくら" [ref=e414]
+                - cell [ref=e415]:
+                  - generic [ref=e416]:
+                    - button "詳細" [ref=e417] [cursor=pointer]:
+                      - img [ref=e418]
+                    - button "編集" [ref=e421] [cursor=pointer]:
+                      - img [ref=e422]
+              - row "ORD-2026-0013 2026-02-11 サクラ商事株式会社 LED基板ユニット LB-100 321 ¥2,022,300 2026-03-05 出荷準備中 渡辺 さくら" [ref=e424]:
+                - cell [ref=e425]:
+                  - checkbox [ref=e426] [cursor=pointer]
+                - cell "ORD-2026-0013" [ref=e427]:
+                  - link "ORD-2026-0013" [ref=e428] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-11" [ref=e429]
+                - cell "サクラ商事株式会社" [ref=e430]
+                - cell "LED基板ユニット LB-100" [ref=e431]
+                - cell "321" [ref=e432]
+                - cell "¥2,022,300" [ref=e433]
+                - cell "2026-03-05" [ref=e434]
+                - cell "出荷準備中" [ref=e435]:
+                  - generic [ref=e436]: 出荷準備中
+                - cell "渡辺 さくら" [ref=e437]
+                - cell [ref=e438]:
+                  - generic [ref=e439]:
+                    - button "詳細" [ref=e440] [cursor=pointer]:
+                      - img [ref=e441]
+                    - button "編集" [ref=e444] [cursor=pointer]:
+                      - img [ref=e445]
+              - row "ORD-2026-0014 2026-02-04 サンライズ工業株式会社 サーボモーター SM-750W 425 ¥19,125,000 2026-03-01 完了 佐藤 花子" [ref=e447]:
+                - cell [ref=e448]:
+                  - checkbox [ref=e449] [cursor=pointer]
+                - cell "ORD-2026-0014" [ref=e450]:
+                  - link "ORD-2026-0014" [ref=e451] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-04" [ref=e452]
+                - cell "サンライズ工業株式会社" [ref=e453]
+                - cell "サーボモーター SM-750W" [ref=e454]
+                - cell "425" [ref=e455]
+                - cell "¥19,125,000" [ref=e456]
+                - cell "2026-03-01" [ref=e457]
+                - cell "完了" [ref=e458]:
+                  - generic [ref=e459]: 完了
+                - cell "佐藤 花子" [ref=e460]
+                - cell [ref=e461]:
+                  - generic [ref=e462]:
+                    - button "詳細" [ref=e463] [cursor=pointer]:
+                      - img [ref=e464]
+                    - button "編集" [ref=e467] [cursor=pointer]:
+                      - img [ref=e468]
+              - row "ORD-2026-0015 2026-02-05 ミドリ電子工業株式会社 ゴムパッキン GP-55 237 ¥106,650 2026-03-03 処理中 渡辺 さくら" [ref=e470]:
+                - cell [ref=e471]:
+                  - checkbox [ref=e472] [cursor=pointer]
+                - cell "ORD-2026-0015" [ref=e473]:
+                  - link "ORD-2026-0015" [ref=e474] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-05" [ref=e475]
+                - cell "ミドリ電子工業株式会社" [ref=e476]
+                - cell "ゴムパッキン GP-55" [ref=e477]
+                - cell "237" [ref=e478]
+                - cell "¥106,650" [ref=e479]
+                - cell "2026-03-03" [ref=e480]
+                - cell "処理中" [ref=e481]:
+                  - generic [ref=e482]: 処理中
+                - cell "渡辺 さくら" [ref=e483]
+                - cell [ref=e484]:
+                  - generic [ref=e485]:
+                    - button "詳細" [ref=e486] [cursor=pointer]:
+                      - img [ref=e487]
+                    - button "編集" [ref=e490] [cursor=pointer]:
+                      - img [ref=e491]
+              - row "ORD-2026-0016 2026-02-14 プラネット物産株式会社 タイミングベルト TB-200 295 ¥2,124,000 2026-03-11 出荷済 田中 太郎" [ref=e493]:
+                - cell [ref=e494]:
+                  - checkbox [ref=e495] [cursor=pointer]
+                - cell "ORD-2026-0016" [ref=e496]:
+                  - link "ORD-2026-0016" [ref=e497] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-14" [ref=e498]
+                - cell "プラネット物産株式会社" [ref=e499]
+                - cell "タイミングベルト TB-200" [ref=e500]
+                - cell "295" [ref=e501]
+                - cell "¥2,124,000" [ref=e502]
+                - cell "2026-03-11" [ref=e503]
+                - cell "出荷済" [ref=e504]:
+                  - generic [ref=e505]: 出荷済
+                - cell "田中 太郎" [ref=e506]
+                - cell [ref=e507]:
+                  - generic [ref=e508]:
+                    - button "詳細" [ref=e509] [cursor=pointer]:
+                      - img [ref=e510]
+                    - button "編集" [ref=e513] [cursor=pointer]:
+                      - img [ref=e514]
+              - row "ORD-2026-0017 2026-02-12 株式会社山田製作所 タイミングベルト TB-200 179 ¥1,288,800 2026-03-12 キャンセル 佐藤 花子" [ref=e516]:
+                - cell [ref=e517]:
+                  - checkbox [ref=e518] [cursor=pointer]
+                - cell "ORD-2026-0017" [ref=e519]:
+                  - link "ORD-2026-0017" [ref=e520] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-12" [ref=e521]
+                - cell "株式会社山田製作所" [ref=e522]
+                - cell "タイミングベルト TB-200" [ref=e523]
+                - cell "179" [ref=e524]
+                - cell "¥1,288,800" [ref=e525]
+                - cell "2026-03-12" [ref=e526]
+                - cell "キャンセル" [ref=e527]:
+                  - generic [ref=e528]: キャンセル
+                - cell "佐藤 花子" [ref=e529]
+                - cell [ref=e530]:
+                  - generic [ref=e531]:
+                    - button "詳細" [ref=e532] [cursor=pointer]:
+                      - img [ref=e533]
+                    - button "編集" [ref=e536] [cursor=pointer]:
+                      - img [ref=e537]
+              - row "ORD-2026-0018 2026-02-04 ブルーウェーブ株式会社 ステンレス板 SUS304 t2.0 17 ¥255,000 2026-02-23 出荷準備中 佐藤 花子" [ref=e539]:
+                - cell [ref=e540]:
+                  - checkbox [ref=e541] [cursor=pointer]
+                - cell "ORD-2026-0018" [ref=e542]:
+                  - link "ORD-2026-0018" [ref=e543] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-04" [ref=e544]
+                - cell "ブルーウェーブ株式会社" [ref=e545]
+                - cell "ステンレス板 SUS304 t2.0" [ref=e546]
+                - cell "17" [ref=e547]
+                - cell "¥255,000" [ref=e548]
+                - cell "2026-02-23" [ref=e549]
+                - cell "出荷準備中" [ref=e550]:
+                  - generic [ref=e551]: 出荷準備中
+                - cell "佐藤 花子" [ref=e552]
+                - cell [ref=e553]:
+                  - generic [ref=e554]:
+                    - button "詳細" [ref=e555] [cursor=pointer]:
+                      - img [ref=e556]
+                    - button "編集" [ref=e559] [cursor=pointer]:
+                      - img [ref=e560]
+              - row "ORD-2026-0019 2026-02-05 アジアパーツ株式会社 銅パイプ CP-15A 301 ¥1,685,600 2026-03-05 出荷準備中 高橋 美咲" [ref=e562]:
+                - cell [ref=e563]:
+                  - checkbox [ref=e564] [cursor=pointer]
+                - cell "ORD-2026-0019" [ref=e565]:
+                  - link "ORD-2026-0019" [ref=e566] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-05" [ref=e567]
+                - cell "アジアパーツ株式会社" [ref=e568]
+                - cell "銅パイプ CP-15A" [ref=e569]
+                - cell "301" [ref=e570]
+                - cell "¥1,685,600" [ref=e571]
+                - cell "2026-03-05" [ref=e572]
+                - cell "出荷準備中" [ref=e573]:
+                  - generic [ref=e574]: 出荷準備中
+                - cell "高橋 美咲" [ref=e575]
+                - cell [ref=e576]:
+                  - generic [ref=e577]:
+                    - button "詳細" [ref=e578] [cursor=pointer]:
+                      - img [ref=e579]
+                    - button "編集" [ref=e582] [cursor=pointer]:
+                      - img [ref=e583]
+              - row "ORD-2026-0020 2026-02-09 グローバルテック株式会社 タイミングベルト TB-200 80 ¥576,000 2026-03-10 新規 佐藤 花子" [ref=e585]:
+                - cell [ref=e586]:
+                  - checkbox [ref=e587] [cursor=pointer]
+                - cell "ORD-2026-0020" [ref=e588]:
+                  - link "ORD-2026-0020" [ref=e589] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-09" [ref=e590]
+                - cell "グローバルテック株式会社" [ref=e591]
+                - cell "タイミングベルト TB-200" [ref=e592]
+                - cell "80" [ref=e593]
+                - cell "¥576,000" [ref=e594]
+                - cell "2026-03-10" [ref=e595]
+                - cell "新規" [ref=e596]:
+                  - generic [ref=e597]: 新規
+                - cell "佐藤 花子" [ref=e598]
+                - cell [ref=e599]:
+                  - generic [ref=e600]:
+                    - button "詳細" [ref=e601] [cursor=pointer]:
+                      - img [ref=e602]
+                    - button "編集" [ref=e605] [cursor=pointer]:
+                      - img [ref=e606]
+              - row "ORD-2026-0021 2026-02-06 ニュースター金属株式会社 サーボモーター SM-750W 438 ¥19,710,000 2026-02-18 処理中 伊藤 大輔" [ref=e608]:
+                - cell [ref=e609]:
+                  - checkbox [ref=e610] [cursor=pointer]
+                - cell "ORD-2026-0021" [ref=e611]:
+                  - link "ORD-2026-0021" [ref=e612] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-06" [ref=e613]
+                - cell "ニュースター金属株式会社" [ref=e614]
+                - cell "サーボモーター SM-750W" [ref=e615]
+                - cell "438" [ref=e616]
+                - cell "¥19,710,000" [ref=e617]
+                - cell "2026-02-18" [ref=e618]
+                - cell "処理中" [ref=e619]:
+                  - generic [ref=e620]: 処理中
+                - cell "伊藤 大輔" [ref=e621]
+                - cell [ref=e622]:
+                  - generic [ref=e623]:
+                    - button "詳細" [ref=e624] [cursor=pointer]:
+                      - img [ref=e625]
+                    - button "編集" [ref=e628] [cursor=pointer]:
+                      - img [ref=e629]
+              - row "ORD-2026-0022 2026-02-02 日本精密工業株式会社 フィルターエレメント FE-300 92 ¥165,600 2026-02-25 出荷準備中 伊藤 大輔" [ref=e631]:
+                - cell [ref=e632]:
+                  - checkbox [ref=e633] [cursor=pointer]
+                - cell "ORD-2026-0022" [ref=e634]:
+                  - link "ORD-2026-0022" [ref=e635] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-02" [ref=e636]
+                - cell "日本精密工業株式会社" [ref=e637]
+                - cell "フィルターエレメント FE-300" [ref=e638]
+                - cell "92" [ref=e639]
+                - cell "¥165,600" [ref=e640]
+                - cell "2026-02-25" [ref=e641]
+                - cell "出荷準備中" [ref=e642]:
+                  - generic [ref=e643]: 出荷準備中
+                - cell "伊藤 大輔" [ref=e644]
+                - cell [ref=e645]:
+                  - generic [ref=e646]:
+                    - button "詳細" [ref=e647] [cursor=pointer]:
+                      - img [ref=e648]
+                    - button "編集" [ref=e651] [cursor=pointer]:
+                      - img [ref=e652]
+              - row "ORD-2026-0023 2026-02-12 グローバルテック株式会社 銅パイプ CP-15A 65 ¥364,000 2026-02-28 完了 高橋 美咲" [ref=e654]:
+                - cell [ref=e655]:
+                  - checkbox [ref=e656] [cursor=pointer]
+                - cell "ORD-2026-0023" [ref=e657]:
+                  - link "ORD-2026-0023" [ref=e658] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-12" [ref=e659]
+                - cell "グローバルテック株式会社" [ref=e660]
+                - cell "銅パイプ CP-15A" [ref=e661]
+                - cell "65" [ref=e662]
+                - cell "¥364,000" [ref=e663]
+                - cell "2026-02-28" [ref=e664]
+                - cell "完了" [ref=e665]:
+                  - generic [ref=e666]: 完了
+                - cell "高橋 美咲" [ref=e667]
+                - cell [ref=e668]:
+                  - generic [ref=e669]:
+                    - button "詳細" [ref=e670] [cursor=pointer]:
+                      - img [ref=e671]
+                    - button "編集" [ref=e674] [cursor=pointer]:
+                      - img [ref=e675]
+              - row "ORD-2026-0024 2026-02-14 ミドリ電子工業株式会社 電子基板 PCB-200X 211 ¥1,793,500 2026-03-09 処理中 佐藤 花子" [ref=e677]:
+                - cell [ref=e678]:
+                  - checkbox [ref=e679] [cursor=pointer]
+                - cell "ORD-2026-0024" [ref=e680]:
+                  - link "ORD-2026-0024" [ref=e681] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-14" [ref=e682]
+                - cell "ミドリ電子工業株式会社" [ref=e683]
+                - cell "電子基板 PCB-200X" [ref=e684]
+                - cell "211" [ref=e685]
+                - cell "¥1,793,500" [ref=e686]
+                - cell "2026-03-09" [ref=e687]
+                - cell "処理中" [ref=e688]:
+                  - generic [ref=e689]: 処理中
+                - cell "佐藤 花子" [ref=e690]
+                - cell [ref=e691]:
+                  - generic [ref=e692]:
+                    - button "詳細" [ref=e693] [cursor=pointer]:
+                      - img [ref=e694]
+                    - button "編集" [ref=e697] [cursor=pointer]:
+                      - img [ref=e698]
+              - row "ORD-2026-0025 2026-02-07 プラネット物産株式会社 電子基板 PCB-200X 194 ¥1,649,000 2026-03-02 新規 鈴木 一郎" [ref=e700]:
+                - cell [ref=e701]:
+                  - checkbox [ref=e702] [cursor=pointer]
+                - cell "ORD-2026-0025" [ref=e703]:
+                  - link "ORD-2026-0025" [ref=e704] [cursor=pointer]:
+                    - /url: "#"
+                - cell "2026-02-07" [ref=e705]
+                - cell "プラネット物産株式会社" [ref=e706]
+                - cell "電子基板 PCB-200X" [ref=e707]
+                - cell "194" [ref=e708]
+                - cell "¥1,649,000" [ref=e709]
+                - cell "2026-03-02" [ref=e710]
+                - cell "新規" [ref=e711]:
+                  - generic [ref=e712]: 新規
+                - cell "鈴木 一郎" [ref=e713]
+                - cell [ref=e714]:
+                  - generic [ref=e715]:
+                    - button "詳細" [ref=e716] [cursor=pointer]:
+                      - img [ref=e717]
+                    - button "編集" [ref=e720] [cursor=pointer]:
+                      - img [ref=e721]
+          - generic [ref=e723]:
+            - button "前へ" [disabled] [ref=e724]:
+              - img [ref=e725]
+              - text: 前へ
+            - generic [ref=e727]:
+              - button "1" [ref=e728] [cursor=pointer]
+              - button "2" [ref=e729] [cursor=pointer]
+              - button "3" [ref=e730] [cursor=pointer]
+            - button "次へ" [ref=e731] [cursor=pointer]:
+              - text: 次へ
+              - img [ref=e732]
+```

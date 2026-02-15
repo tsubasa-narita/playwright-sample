@@ -1,0 +1,253 @@
+﻿
+Running 6 tests using 6 workers
+
+[1A[2K[1/6] [chromium] › tests\e2e\02_filtering.spec.ts:54:10 › Filtering › 02-06: No Results
+[1A[2K[2/6] [chromium] › tests\e2e\02_filtering.spec.ts:58:10 › Filtering › 02-07: Filter Clear
+[1A[2K[3/6] [Mobile Chrome] › tests\e2e\02_filtering.spec.ts:54:10 › Filtering › 02-06: No Results
+[1A[2K[4/6] [Mobile Chrome] › tests\e2e\02_filtering.spec.ts:58:10 › Filtering › 02-07: Filter Clear
+[1A[2K[5/6] [Mobile Chrome] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact)
+[1A[2K[6/6] [chromium] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact)
+[1A[2K[Mobile Chrome] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact)
+[DEBUG] Searching for Order No: 'ORD-2026-0001'
+
+[1A[2K[chromium] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact)
+[DEBUG] Searching for Order No: 'ORD-2026-0001'
+
+[1A[2K[DEBUG] Waiting for 1000ms...
+
+[1A[2K[Mobile Chrome] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact)
+[DEBUG] Waiting for 1000ms...
+
+[1A[2K[chromium] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact)
+[DEBUG] Checking toast visibility...
+
+[1A[2K[Mobile Chrome] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact)
+[DEBUG] Checking toast visibility...
+
+node.exe : [1A[2K[chromium] › tests\e2e\02_f
+iltering.spec.ts:9:5 › Filtering › 02-01: Orde
+r No Search (Exact)
+発生場所 行:1 文字:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Pro
+gram Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( 
+   [1A[2K[chromi... Search (Exact):String)  
+   [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandEr 
+   ror
+ 
+[DEBUG] Test Failed: locator.isVisible: Error:
+ strict mode violation: locator('.toast.succes
+s') resolved to 2 elements:
+    1) <div data-v-f5a0d105="" class="toast su
+ccess">受注データを読み込みました</div> aka getByText('受注デー
+タを読み込みました')
+    2) <div data-v-f5a0d105="" class="toast su
+ccess">1 件の受注データが見つかりました</div> aka getByText('
+件の受注データが見つかりました')
+
+Call log:
+[2m    - checking visibility of locator('.toa
+st.success')[22m
+
+    at [90mC:\develop\scm\[39mtests\e2e\02_f
+iltering.spec.ts:26:29 {
+  [32mSymbol(step)[39m: {
+    location: {
+      file: [32m'C:\\develop\\scm\\tests\\e2e
+\\02_filtering.spec.ts'[39m,
+      line: [33m26[39m,
+      column: [33m29[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m"Is visible locator('.toast.su
+ccess')"[39m,
+    apiName: [32m'locator.isVisible'[39m,
+    params: { selector: [32m'.toast.success'
+[39m, strict: [33mtrue[39m },
+    group: [32m'getter'[39m,
+    stepId: [32m'pw:api@42'[39m,
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [36m[TestInfoImpl][39m,
+      _stepId: [32m'pw:api@42'[39m,
+      _title: [32m"Is visible locator('.toast
+.success')"[39m,
+      _parentStep: [90mundefined[39m,
+      skip: [36m[Function (anonymous)][39m
+    },
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1771164016668[39m,
+    error: {
+      message: [32m"Error: locator.isVisible:
+ Error: strict mode violation: locator('.toast
+.success') resolved to 2 elements:\n"[39m +
+        [32m`    1) <div data-v-f5a0d105="" c
+lass="toast success">受注データを読み込みました</div> aka g
+etByText('受注データを読み込みました')\n`[39m +
+        [32m`    2) <div data-v-f5a0d105="" c
+lass="toast success">1 件の受注データが見つかりました</div> a
+ka getByText('件の受注データが見つかりました')\n`[39m +
+        [32m'\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m"\x1B[2m    - checking visibility
+ of locator('.toast.success')\x1B[22m\n"[39m,
+      stack: [32m"Error: locator.isVisible: E
+rror: strict mode violation: locator('.toast.s
+uccess') resolved to 2 elements:\n"[39m +
+        [32m`    1) <div data-v-f5a0d105="" c
+lass="toast success">受注データを読み込みました</div> aka g
+etByText('受注データを読み込みました')\n`[39m +
+        [32m`    2) <div data-v-f5a0d105="" c
+lass="toast success">1 件の受注データが見つかりました</div> a
+ka getByText('件の受注データが見つかりました')\n`[39m +
+        [32m'\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m"\x1B[2m    - checking visibility
+ of locator('.toast.success')\x1B[22m\n"[39m 
++
+        [32m'\n'[39m +
+        [32m'    at C:\\develop\\scm\\tests\\
+e2e\\02_filtering.spec.ts:26:29'[39m,
+      cause: [90mundefined[39m
+    }
+  }
+}
+
+[1A[2K[Mobile Chrome] › tests\e2e\02_filteri
+ng.spec.ts:9:5 › Filtering › 02-01: Order No S
+earch (Exact)
+[DEBUG] Test Failed: locator.isVisible: Error:
+ strict mode violation: locator('.toast.succes
+s') resolved to 2 elements:
+    1) <div data-v-f5a0d105="" class="toast su
+ccess">受注データを読み込みました</div> aka getByText('受注デー
+タを読み込みました')
+    2) <div data-v-f5a0d105="" class="toast su
+ccess">1 件の受注データが見つかりました</div> aka getByText('
+件の受注データが見つかりました')
+
+Call log:
+[2m    - checking visibility of locator('.toa
+st.success')[22m
+
+
+    at [90mC:\develop\scm\[39mtests\e2e\02_f
+iltering.spec.ts:26:29 {
+  [32mSymbol(step)[39m: {
+    location: {
+      file: [32m'C:\\develop\\scm\\tests\\e2e
+\\02_filtering.spec.ts'[39m,
+      line: [33m26[39m,
+      column: [33m29[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m"Is visible locator('.toast.su
+ccess')"[39m,
+    apiName: [32m'locator.isVisible'[39m,
+    params: { selector: [32m'.toast.success'
+[39m, strict: [33mtrue[39m },
+    group: [32m'getter'[39m,
+    stepId: [32m'pw:api@42'[39m,
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [36m[TestInfoImpl][39m,
+      _stepId: [32m'pw:api@42'[39m,
+      _title: [32m"Is visible locator('.toast
+.success')"[39m,
+      _parentStep: [90mundefined[39m,
+      skip: [36m[Function (anonymous)][39m
+    },
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1771164016669[39m,
+    error: {
+      message: [32m"Error: locator.isVisible:
+ Error: strict mode violation: locator('.toast
+.success') resolved to 2 elements:\n"[39m +
+        [32m`    1) <div data-v-f5a0d105="" c
+lass="toast success">受注データを読み込みました</div> aka g
+etByText('受注データを読み込みました')\n`[39m +
+        [32m`    2) <div data-v-f5a0d105="" c
+lass="toast success">1 件の受注データが見つかりました</div> a
+ka getByText('件の受注データが見つかりました')\n`[39m +
+        [32m'\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m"\x1B[2m    - checking visibility
+ of locator('.toast.success')\x1B[22m\n"[39m,
+      stack: [32m"Error: locator.isVisible: E
+rror: strict mode violation: locator('.toast.s
+uccess') resolved to 2 elements:\n"[39m +
+        [32m`    1) <div data-v-f5a0d105="" c
+lass="toast success">受注データを読み込みました</div> aka g
+etByText('受注データを読み込みました')\n`[39m +
+        [32m`    2) <div data-v-f5a0d105="" c
+lass="toast success">1 件の受注データが見つかりました</div> a
+ka getByText('件の受注データが見つかりました')\n`[39m +
+        [32m'\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m"\x1B[2m    - checking visibility
+ of locator('.toast.success')\x1B[22m\n"[39m 
++
+        [32m'\n'[39m +
+        [32m'    at C:\\develop\\scm\\tests\\
+e2e\\02_filtering.spec.ts:26:29'[39m,
+      cause: [90mundefined[39m
+    }
+  }
+}
+[1A[2K  1) [Mobile Chrome] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact) 
+
+    Error: locator.isVisible: Error: strict mode violation: locator('.toast.success') resolved to 2 elements:
+        1) <div data-v-f5a0d105="" class="toast success">受注データを読み込みました</div> aka getByText('受注データを読み込みました')
+        2) <div data-v-f5a0d105="" class="toast success">1 件の受注データが見つかりました</div> aka getByText('件の受注データが見つかりました')
+
+    Call log:
+    [2m    - checking visibility of locator('.toast.success')[22m
+
+
+      24 |             console.log('[DEBUG] Checking toast visibility...');
+      25 |             const toast = page.locator('.toast.success');
+    > 26 |             if (await toast.isVisible()) {
+         |                             ^
+      27 |                 console.log('[DEBUG] Toast is visible.');
+      28 |                 const toastText = await toast.innerText();
+      29 |                 console.log(`[DEBUG] Toast text: '${toastText}'`);
+        at C:\develop\scm\tests\e2e\02_filtering.spec.ts:26:29
+
+    Error Context: test-results\02_filtering-Filtering-02-01-Order-No-Search-Exact--Mobile-Chrome\error-context.md
+
+
+[1A[2K  2) [chromium] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact) ──
+
+    Error: locator.isVisible: Error: strict mode violation: locator('.toast.success') resolved to 2 elements:
+        1) <div data-v-f5a0d105="" class="toast success">受注データを読み込みました</div> aka getByText('受注データを読み込みました')
+        2) <div data-v-f5a0d105="" class="toast success">1 件の受注データが見つかりました</div> aka getByText('件の受注データが見つかりました')
+
+    Call log:
+    [2m    - checking visibility of locator('.toast.success')[22m
+
+
+      24 |             console.log('[DEBUG] Checking toast visibility...');
+      25 |             const toast = page.locator('.toast.success');
+    > 26 |             if (await toast.isVisible()) {
+         |                             ^
+      27 |                 console.log('[DEBUG] Toast is visible.');
+      28 |                 const toastText = await toast.innerText();
+      29 |                 console.log(`[DEBUG] Toast text: '${toastText}'`);
+        at C:\develop\scm\tests\e2e\02_filtering.spec.ts:26:29
+
+    Error Context: test-results\02_filtering-Filtering-02-01-Order-No-Search-Exact--chromium\error-context.md
+
+
+[1A[2K  2 failed
+    [chromium] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact) ───
+    [Mobile Chrome] › tests\e2e\02_filtering.spec.ts:9:5 › Filtering › 02-01: Order No Search (Exact) 
+  4 skipped

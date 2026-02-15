@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCM Manager - 受注管理</title>
+  <meta name="description" content="SCMシステム - 受注管理画面">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ローディングオーバーレイ -->
+  <div id="loading-overlay" class="loading-overlay hidden">
+    <div class="spinner"></div>
+    <p class="loading-text">データを読み込み中...</p>
+  </div>
+
+  <!-- トースト通知 -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#4F8CFF"/>
+          <path d="M7 14h4l3-6 4 12 3-6h4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">SCM Manager</span>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="#" class="nav-link">ダッシュボード</a>
+      <a href="#" class="nav-link active">受注管理</a>
+      <a href="#" class="nav-link">在庫管理</a>
+      <a href="#" class="nav-link">出荷管理</a>
+      <a href="#" class="nav-link">マスタ管理</a>
+    </nav>
+    <div class="header-right">
+      <button class="icon-btn" title="通知">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M10 17.5c.83 0 1.5-.67 1.5-1.5h-3c0 .83.67 1.5 1.5 1.5zm5-4.5V9c0-2.76-1.86-5.07-4.5-5.73V2.5a.5.5 0 00-1 0v.77C6.86 3.93 5 6.24 5 9v4l-1.5 1.5v.5h13v-.5L15 13z"/>
+        </svg>
+        <span class="notification-badge">3</span>
+      </button>
+      <div class="user-info">
+        <div class="avatar">TY</div>
+        <span class="user-name">田中 太郎</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-wrapper">
+    <!-- サイドバー -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">受注管理</h3>
+        <ul class="sidebar-menu">
+          <li><a href="#" class="sidebar-link active">受注一覧</a></li>
+          <li><a href="#" class="sidebar-link">新規受注登録</a></li>
+          <li><a href="#" class="sidebar-link">受注承認</a></li>
+          <li><a href="#" class="sidebar-link">納品予定</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">レポート</h3>
+        <ul class="sidebar-menu">
+          <li><a href="#" class="sidebar-link">売上レポート</a></li>
+          <li><a href="#" class="sidebar-link">在庫回転率</a></li>
+          <li><a href="#" class="sidebar-link">納期遵守率</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">設定</h3>
+        <ul class="sidebar-menu">
+          <li><a href="#" class="sidebar-link">通知設定</a></li>
+          <li><a href="#" class="sidebar-link">アカウント</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+      <!-- ページヘッダー -->
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">受注一覧</h1>
+          <p class="page-subtitle">全ての受注情報を確認・管理できます</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn btn-secondary" onclick="exportCSV()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 11v2.5A1.5 1.5 0 003.5 15h9a1.5 1.5 0 001.5-1.5V11M8 1v9M5 7l3 3 3-3"/>
+            </svg>
+            CSV出力
+          </button>
+          <button class="btn btn-primary" onclick="showNewOrderModal()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 3v10M3 8h10"/>
+            </svg>
+            新規受注
+          </button>
+        </div>
+      </div>
+
+      <!-- サマリーカード -->
+      <div class="summary-cards">
+        <div class="summary-card">
+          <div class="summary-icon blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <div class="summary-info">
+            <span class="summary-label">今月の受注件数</span>
+            <span class="summary-value" id="total-orders">--</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <div class="summary-info">
+            <span class="summary-label">今月の受注金額</span>
+            <span class="summary-value" id="total-amount">--</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon orange">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="summary-info">
+            <span class="summary-label">処理待ち</span>
+            <span class="summary-value" id="pending-orders">--</span>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon red">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/>
+            </svg>
+          </div>
+          <div class="summary-info">
+            <span class="summary-label">納期遅延</span>
+            <span class="summary-value" id="delayed-orders">--</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 検索フィルター -->
+      <div class="filter-panel">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label class="filter-label">受注番号</label>
+            <input type="text" class="filter-input" id="filter-order-no" placeholder="例: ORD-2026-0001">
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">取引先</label>
+            <select class="filter-select" id="filter-customer">
+              <option value="">すべて</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">ステータス</label>
+            <select class="filter-select" id="filter-status">
+              <option value="">すべて</option>
+              <option value="新規">新規</option>
+              <option value="処理中">処理中</option>
+              <option value="出荷準備中">出荷準備中</option>
+              <option value="出荷済">出荷済</option>
+              <option value="完了">完了</option>
+              <option value="キャンセル">キャンセル</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">担当者</label>
+            <select class="filter-select" id="filter-assignee">
+              <option value="">すべて</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-row">
+          <div class="filter-group">
+            <label class="filter-label">受注日（開始）</label>
+            <input type="date" class="filter-input" id="filter-date-from" value="2026-02-01">
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">受注日（終了）</label>
+            <input type="date" class="filter-input" id="filter-date-to" value="2026-02-15">
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">商品カテゴリ</label>
+            <select class="filter-select" id="filter-category">
+              <option value="">すべて</option>
+            </select>
+          </div>
+          <div class="filter-group filter-actions">
+            <button class="btn btn-primary btn-sm" onclick="searchOrders()">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="6" cy="6" r="4.5"/><path d="M13 13l-3.5-3.5"/>
+              </svg>
+              検索
+            </button>
+            <button class="btn btn-ghost btn-sm" onclick="clearFilters()">クリア</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- テーブルコンテナ -->
+      <div class="table-container">
+        <div class="table-header">
+          <div class="table-info">
+            <span id="result-count">-- 件</span>の結果を表示
+          </div>
+          <div class="table-controls">
+            <select class="table-select" id="page-size" onchange="changePageSize()">
+              <option value="10">10件</option>
+              <option value="25" selected>25件</option>
+              <option value="50">50件</option>
+              <option value="100">100件</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="th-checkbox"><input type="checkbox" id="select-all" onchange="toggleSelectAll()"></th>
+                <th class="sortable" onclick="sortTable('orderNo')">受注番号 <span class="sort-icon">↕</span></th>
+                <th class="sortable" onclick="sortTable('orderDate')">受注日 <span class="sort-icon">↕</span></th>
+                <th class="sortable" onclick="sortTable('customer')">取引先 <span class="sort-icon">↕</span></th>
+                <th>商品名</th>
+                <th class="sortable num" onclick="sortTable('quantity')">数量 <span class="sort-icon">↕</span></th>
+                <th class="sortable num" onclick="sortTable('amount')">金額 <span class="sort-icon">↕</span></th>
+                <th class="sortable" onclick="sortTable('deliveryDate')">納期 <span class="sort-icon">↕</span></th>
+                <th>ステータス</th>
+                <th>担当者</th>
+                <th class="th-actions">操作</th>
+              </tr>
+            </thead>
+            <tbody id="order-table-body">
+              <!-- JSで動的に生成 -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ページネーション -->
+        <div class="pagination">
+          <button class="page-btn" id="prev-page" onclick="changePage(-1)" disabled>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 2L4 7l5 5"/>
+            </svg>
+            前へ
+          </button>
+          <div class="page-numbers" id="page-numbers"></div>
+          <button class="page-btn" id="next-page" onclick="changePage(1)">
+            次へ
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 2l5 5-5 5"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 詳細モーダル -->
+  <div class="modal-backdrop hidden" id="detail-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">受注詳細</h2>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- JSで動的に生成 -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal()">閉じる</button>
+        <button class="btn btn-primary" onclick="closeModal()">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
